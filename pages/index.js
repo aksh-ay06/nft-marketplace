@@ -1,5 +1,5 @@
 "use client";
-import { useState,useEffect,useRef } from 'react';
+import {useState,useEffect,useRef} from 'react';
 import {Banner,CreaterCard} from '../components';
 import images from '../assets';
 import { makeId } from '@/utils/makeId';
@@ -16,9 +16,9 @@ const Home = () => {
     const { current } = scrollRef;
     const scrollAmount = window.innerWidth > 1800 ? 270 : 210;
     if (direction === 'left') {
-      current.scrollLeft -= scrollAmount;
+      current.scrollLeft -= smallAmount;
     } else {
-      current.scrollLeft += scrollAmount;
+      current.scrollLeft += smallAmount;
     }
   };
 
@@ -50,11 +50,10 @@ const Home = () => {
         childStyles='md:text-4xl sm:text-2xl sx=text-xl text-left'
         parentStyles='justify-start mb-6 h-72 sm:h-60 p-12 xs:p-4 xs:h-44 rounded-3xl '
       />
-
       <div>
         <h1 className='font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0'>Tops Sellers</h1>
         <div className='relative flex-1 max-w-full flex mt-3' ref={parentRef}>
-        <div className='flex flex-row w-max overflow-x-scoll no-scrollbar select-none' ref={scrollRef}>
+        <div className='flex flex-row w-max overflow-x-scroll no-scrollbar select-none' ref={scrollRef}>
         {[6,7,8,9,10].map((i)=>(
           <CreaterCard 
             key={`creater-${i}`}
@@ -80,6 +79,7 @@ const Home = () => {
 
     </div>
   </div>
-)}
+);
+};
 
 export default Home;
