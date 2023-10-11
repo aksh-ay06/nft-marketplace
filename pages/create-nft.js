@@ -32,10 +32,10 @@ const Createnft = () => {
 
   return (
     <div className="flex justify-center sm:px-4 p-12">
-      <div className="w-3/5 md-w-full">
-        <h1 className="flex-1 before:font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">Create New Items</h1>
+      <div className="w-3/5 md:w-full">
+        <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">Create New Items</h1>
         <div className="mt-16">
-        <p className="flex-1 before:font-poppins dark:text-white text-nft-black-1 font-semibold text-xl">Upload Files</p>
+        <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl">Upload Files</p>
           <div className="mt-4">
             <div {...getRootProps()} className={fileStyle}>
               <input {...getInputProps()} />
